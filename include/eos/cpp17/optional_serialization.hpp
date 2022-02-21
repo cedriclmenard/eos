@@ -22,7 +22,7 @@
 #ifndef EOS_OPTIONAL_SERIALIZATION_HPP_
 #define EOS_OPTIONAL_SERIALIZATION_HPP_
 
-#if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
+#if !define(__arm__) && !define(__aarch64__) && (__cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
   #include "cereal/types/optional.hpp"
 #else
   #include "eos/cpp17/detail/akrzemi1_optional_serialization.hpp"

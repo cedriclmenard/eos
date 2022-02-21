@@ -22,7 +22,7 @@
 #ifndef EOS_VARIANT_HPP_
 #define EOS_VARIANT_HPP_
 
-#if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
+#if !define(__arm__) && !define(__aarch64__) && (__cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
   #include <variant>
   namespace eos {
     namespace cpp17 {
